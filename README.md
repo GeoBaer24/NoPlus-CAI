@@ -12,7 +12,7 @@ That's it.
 
 ## OMG!!! I NEED THIS!!!!!!
 
-Calm down, I'll explain. First off, this is a chrome extension. So you'll need a Chrome-based Browser. Sorry, if you're using Firefox.
+Calm down, I'll explain. First off, this is a chrome extension. So you'll need a Chrome-based Browser. Sorry, if you're using Firefox. You can use [uBlock Origin](https://ublockorigin.com) to achieve a similar effect.
 
 **Step 1**: Clone this repository. Sound complex? Click the **Code** Button at the Top, then click **Download ZIP**. Extract it when downloaded.
 
@@ -25,6 +25,7 @@ Calm down, I'll explain. First off, this is a chrome extension. So you'll need a
 
 ## Support me (Optional)
 
-Yeah I'm broke, so if you wanna help, you can support me [here, at my Ko-fi page](https://ko-fi.com/geobaer).
+Yeah I'm broke, so if you wanna help, you can support me here:
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/H2H851D2M)
 
 ##
