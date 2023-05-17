@@ -1,5 +1,7 @@
 let isWaiting = this.document.title.includes("Waiting");
 let observer = null;
+let runningVersion = chrome.runtime.getManifest().version
+let newestVersion = runningVersion;
 
 window.addEventListener('load', function() {
 	removeButton(document.querySelectorAll(".shine-btn"));
@@ -10,7 +12,7 @@ window.addEventListener('load', function() {
 		this.document.querySelector('div').remove();
 
 		let title = this.document.createElement("h1");
-		title.innerHTML = "Please wait...<br>You are currently in Queue for " + waitingTime + " minutes.";
+		title.innerHTML = "Please wait...<br>You are currently in Queue for " + waitingTime + " minutes." + ((waitingTime < 5) ? "" : "<br>Yikes... is the site down?");
 		title.style.color = "white";
 		title.style.textAlign = "center";
 		title.style.marginTop = "2%";
@@ -40,14 +42,23 @@ window.addEventListener('load', function() {
 		footer.innerHTML = "Thank you for using NoPlus! Check for Updates <a href='https://github.com/GeoBaer24/NoPlus-CAI'>here</a> or <a href='https://reddit.com/u/JustACruiser'>on my Reddit</a>.";
 		footer.style.color = "white";
 		footer.style.textAlign = "center";
-		footer.style.marginTop = "5%";
+		footer.style.marginTop = "3%";
 		centerObject(footer);
+
+		let versionChecker = this.document.createElement("h3");
+		versionChecker.innerHTML = "Good News! You're running the latest version." //: )  + runningVersion + " " + newestVersion;
+		versionChecker.style.color = "white";
+		versionChecker.style.textAlign = "center";
+		versionChecker.style.marginTop = "2%";
+		centerObject(versionChecker);
+		checkUpdate(versionChecker);
 
 		this.document.body.appendChild(title);
 		this.document.body.appendChild(subtitle);
 		this.document.body.appendChild(gifElement);
 		this.document.body.appendChild(button);
 		this.document.body.appendChild(footer);
+		this.document.body.appendChild(versionChecker);
 	}
 	else setupObserver();
 })
@@ -55,6 +66,19 @@ window.addEventListener('load', function() {
 window.addEventListener('beforeunload', function() {
 	if(observer !== null) observer.disconnect();
 })
+
+function checkUpdate(versionChecker) {
+	const Http = new XMLHttpRequest();
+	Http.open("GET", "https://raw.githubusercontent.com/GeoBaer24/NoPlus-CAI/untested/version.txt")
+	Http.onreadystatechange = function() {
+		if(Http.readyState === 4 && Http.status === 200) {
+			newestVersion = Http.responseText.replace("\n", "");
+			if(newestVersion !== runningVersion) 
+				versionChecker.innerHTML = "Heads up, an <a href='https://github.com/GeoBaer24/NoPlus-CAI'>update</a> is available.<br>Newest Version: " + newestVersion + "<br>You're running: " + runningVersion;
+		}
+	}
+	Http.send();
+}
 
 function centerObject(object) {
 	object.style.display = "block";
