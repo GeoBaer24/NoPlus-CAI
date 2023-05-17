@@ -5,6 +5,7 @@ Hi! I'm Geo. And I'm here to introduce you to **NoPlus**. An extension changing 
 # Heads up!
 
 You're currently looking at the **untested** Branch. Features here are not tested on the Official Website, so they might be unstable or break stuff.
+
 If you have any Problems using the extension, please open an issue [here](https://github.com/GeoBaer24/NoPlus-CAI/issues/new) or send me a PM on my [Reddit](https://reddit.com/u/JustACruiser).
 
 # Features
@@ -12,9 +13,11 @@ If you have any Problems using the extension, please open an issue [here](https:
 There's two features as of right now.
 
 The first one is removing the "Get c.ai+" Button on Chats and the Character Selection screen.
+
 AKA this: <img src="https://raw.githubusercontent.com/GeoBaer24/NoPlus-CAI/untested/MEDIA/Button.png">
 
 And secondly, I have made the Waiting Room more bearable when the site is down or something.
+
 Here's how it should look like: <img src="https://raw.githubusercontent.com/GeoBaer24/NoPlus-CAI/untested/MEDIA/WaitingRoom.png">
 
 ## Installation instructions
@@ -28,6 +31,7 @@ I'm sorry, if you're using Firefox. You can use [uBlock Origin](https://ublockor
 
 **Step 3**: Visit your Extensions Page and enable the Developer Mode. Click on "Load unpacked" and select the Folder that you've extracted.
 > NOTE: To visit Chrome's Extensions Page, go to your settings and click "Extensions" or type [ chrome://extensions ] into your URL-Bar.
+
 > NOTE: This is needed because I don't have this extension on the Chrome Web Store yet. I feel like it's kind of too early.
 
 **Congrats**! You've just installed NoPlus. Enjoy. If you have any simple Feature requests, [open an Issue](https://github.com/GeoBaer24/NoPlus-CAI/issues/new) or contact me on [Reddit](https://reddit.com/u/JustACruiser).
