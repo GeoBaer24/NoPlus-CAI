@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "NoPlus",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Hides c.ai+ Buttons! Support me at https://ko-fi.com/geobaer",
   
     "icons": {
@@ -13,7 +13,8 @@
 	"content_scripts": [
 		{
 			"matches": ["https://beta.character.ai/*"],
-			"js": ["scripts/content.js"]
+			"js": ["scripts/content.js"],
+			"css": ["css/main.css"]
 		}
 	]
 }
